@@ -1,0 +1,17 @@
+{
+    "name": "electron",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "nodemon --watch main.js --exec \"electron .\" "
+    },
+    "repository": "git@github.com:liuwanyong2017/electron.git",
+    "author": "liuwanyong2017 <2674706698@qq.com>",
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3",
+        "electron": "8.2.3"
+    }
+}
