@@ -8,10 +8,11 @@
     "repository": "git@github.com:liuwanyong2017/electron.git",
     "author": "liuwanyong2017 <2674706698@qq.com>",
     "license": "MIT",
-    "dependencies": {
-    },
+    "dependencies": {},
     "devDependencies": {
+        "electron": "8.2.3",
         "nodemon": "^2.0.3",
-        "electron": "8.2.3"
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11"
     }
 }
