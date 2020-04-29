@@ -1,4 +1,5 @@
 const {app, BrowserWindow} = require("electron");
+require("./dist/index.js");
 
 function createWindow() {
     // 创建浏览器窗口
@@ -11,7 +12,9 @@ function createWindow() {
     });
 
     // 加载index.html文件
-    win.loadFile("index.html");
+    // win.loadFile("./web/index.html");
+
+    win.loadURL('http://localhost:3000');
 }
 
 app.whenReady().then(createWindow);

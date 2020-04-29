@@ -1,0 +1,39 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "module": "commonjs",       // 模块引入方式
+        "target": "ES2015",            // 将ts文件转成es6的js代码
+        // 当 noImplicitAny 标志为 true 的时候，TypeScript 编译器不能推断类型，它仍然生成 JavaScript 文件，但是报告一个错误。
+        "noImplicitAny": true,
+        "sourceMap": true,          // 开启sourceMap
+        "preserveConstEnums": true,
+        "emitDecoratorMetadata": true,   // 开启修饰器
+        "experimentalDecorators": true,  // 开启修饰器
+        "removeComments": true,
+        "rootDir": "./src",   // tsc目标文件夹
+        "outDir": "./dist",
+        // tsc输出文件夹
+        "allowSyntheticDefaultImports": true
+    },
+    // atom
+    "atom": {
+        "rewriteTsconfig": true
+    },
+    // 不需要监控编译的目录
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    // 需要ts编译的文件集合
+    "include": [
+        "./src/typdts/*/*.d.ts",
+        "./src/apis/*.ts"
+    ],
+    // 需要ts编译的文件绝对路径
+    "files": [
+        "./src/index.ts"
+    ],
+    "filesGlob": [
+        "./src/**/*.ts"
+    ]
+}
