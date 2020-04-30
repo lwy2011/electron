@@ -1,0 +1,12 @@
+@import "web/src/common";
+
+.yr-button {
+  font-size:$font-size;
+  display: inline-flex;
+  padding: $small-padding;
+  @extend %border;
+  justify-content: center;
+  align-items: center;
+  @extend %border-radius;
+  vertical-align: middle;
+}

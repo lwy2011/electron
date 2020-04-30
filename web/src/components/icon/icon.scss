@@ -1,3 +1,19 @@
+@import "web/src/common";
+@keyframes loading {
+   0%{
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
 .yr-icon{
    width:1em;height:1em;
+   &[loading]{
+      animation: loading 1s infinite linear ;
+   }
+   &[disabled]{
+      @extend %disabled;
+      background: none;
+   }
 }
