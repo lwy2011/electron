@@ -2,7 +2,7 @@ const {path} = require("path");
 
 
 module.exports = {
-    entry: "./src/index.ts",
+    entry: "./web/index.tsx",
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "dist")
@@ -10,8 +10,14 @@ module.exports = {
     module: {
         rules: [
             {
-                test:/\.tsx?$/,
+                test:/\.[tj]sx?$/,
                 use:'ts-loader'
+            },
+            {
+                tset:/\.s?css$/,
+                use:{
+
+                }
             }
         ]
     }
