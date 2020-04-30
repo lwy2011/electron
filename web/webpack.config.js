@@ -14,12 +14,12 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
+
     module: {
         rules: [
             {
-                test: /\.[tj]sx?$/,
+                test: /\.tsx?$/,
                 use: "babel-loader",
-                exclude: /node_modules/
             },
             {
                 test: /\.svg$/,
@@ -50,12 +50,8 @@ module.exports = {
                     },
                     "css-loader", "postcss-loader", "sass-loader"
                 ]
-            }
+            },
         ]
-    },
-    externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
     },
     plugins: [
         new HtmlWebpackPlugin({

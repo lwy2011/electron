@@ -11,6 +11,12 @@ module.exports = smart(
         },
         mode: "development",
         devtool:'source-map',
+        watch: true,  //响应式的打包
+        watchOptions: {
+            poll: 1000,   //每秒轮询500次
+            aggregateTimeout: 500,   //防抖，一直输入代码，500毫秒后再打包
+            ignored: /node_modules/,   //忽略
+        },
         module: {
             rules: []
         },
