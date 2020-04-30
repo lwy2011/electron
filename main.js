@@ -1,5 +1,4 @@
 const {app, BrowserWindow} = require("electron");
-require("./dist/index.js");
 
 function createWindow() {
     // 创建浏览器窗口

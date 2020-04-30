@@ -4,8 +4,9 @@
     "main": "main.js",
     "scripts": {
         "start": "nodemon --watch main.js --exec \"electron .\" ",
-        "dev": "nodemon --watch src/index.ts --exec \"tsc --w\" ",
-        "server": "node dist/index.js"
+        "web-dev": "webpack-dev-server ---config web/webpack.config.dev.js --open",
+        "web-check": "tsc -watch",
+        "web-build": "webpack --config web/webpack.config.prod.js"
     },
     "repository": "git@github.com:liuwanyong2017/electron.git",
     "author": "liuwanyong2017 <2674706698@qq.com>",
@@ -15,14 +16,26 @@
         "react-dom": "^16.13.1"
     },
     "devDependencies": {
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "@babel/preset-react": "^7.9.4",
+        "@babel/preset-typescript": "^7.9.0",
+        "@svgr/webpack": "^5.4.0",
         "@types/react": "^16.9.34",
         "@types/react-dom": "^16.9.7",
+        "babel-loader": "^8.1.0",
+        "css-loader": "^3.5.3",
         "electron": "8.2.3",
+        "file-loader": "^6.0.0",
+        "html-webpack-plugin": "^4.2.1",
         "nodemon": "^2.0.3",
-        "source-map-loader": "^0.2.4",
-        "tslint": "^6.1.2",
+        "sass-loader": "^8.0.2",
         "typescript": "^3.8.3",
+        "url-loader": "^4.1.0",
         "webpack": "^4.43.0",
-        "webpack-cli": "^3.3.11"
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3",
+        "node-sass": "^4.14.0",
+        "webpack-merge": "^4.2.2"
     }
 }
