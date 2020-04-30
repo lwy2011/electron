@@ -34,16 +34,22 @@ module.exports = {
                     {
                         loader: "url-loader",
                         options: {
-                            limit: 80 * 1024
+                            limit: 80 * 1024, esModule: false
                         }
                     },
                 ],
             },
             {
-                test:/\.s?css$/,
-                use:{
-
-                }
+                test: /\.s?css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            insert: "bottom"
+                        }
+                    },
+                    "css-loader", "postcss-loader", "sass-loader"
+                ]
             }
         ]
     },
@@ -57,6 +63,8 @@ module.exports = {
             template: "./web/index.html",
             filename: "index.html"
         }),
-
+        new MiniCssExtractPlugin({
+            filename: "css/main.css"
+        })
     ]
 };
