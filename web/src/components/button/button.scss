@@ -1,7 +1,7 @@
 @import "web/src/common";
 
 .yr-button {
-  font-size:$font-size;
+  font-size: $font-size;
   display: inline-flex;
   padding: $small-padding;
   @extend %border;
@@ -9,4 +9,13 @@
   align-items: center;
   @extend %border-radius;
   vertical-align: middle;
+  cursor: pointer;
+  transition: all .5s;
+  &:active {
+    background: darken($border-color, 10%);
+  }
+  &:hover{
+    border-color: $blue;opacity: .6;
+  }
+
 }

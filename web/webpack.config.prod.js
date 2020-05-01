@@ -2,7 +2,7 @@ const path = require("path");
 const base = require("./webpack.config");
 const {smart} = require("webpack-merge");
 
-module.exports = smart(
+module.exports = smart(  //这里的dllplugin没设置！！注意！
     base,
     {
         mode: "production",

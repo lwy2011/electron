@@ -1,7 +1,7 @@
 const path = require("path");
 const base = require("./webpack.config");
 const {smart} = require("webpack-merge");
-
+const webpack = require('webpack')
 module.exports = smart(
     base,
     {
@@ -20,6 +20,10 @@ module.exports = smart(
         module: {
             rules: []
         },
-        plugins: []
+        plugins: [
+            new webpack.DllReferencePlugin({
+                manifest:path.resolve(__dirname,'dist','manifest.json')
+            })
+        ]
     }
 );

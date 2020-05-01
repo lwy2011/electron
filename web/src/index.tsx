@@ -9,8 +9,6 @@ ReactDOM.render(
         <Icon name={'loading'} disabled={true} />
         <Button icon={'download'} text={'下载'}/>
         <Button  text={'下载'}/>
-        <Button icon={'download'} />
-
     </div>,
     document.querySelector("#app")
 );
