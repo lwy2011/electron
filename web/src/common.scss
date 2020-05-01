@@ -19,7 +19,7 @@ $small-padding: 4px;
 %disabled {
   cursor: not-allowed;
   background: lighten($border-color, 10%);
-  fill: lighten($border-color, 10%);
+  fill: $border-color;
 }
 
 %border-radius{

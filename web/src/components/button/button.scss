@@ -23,5 +23,15 @@
   span + svg{
     margin-left: $small-padding;
   }
-
+  &.leftIcon{
+    >svg{
+      order:1;
+    }
+    >span{
+      order:2;
+    }
+    span + svg{
+      margin-left: 0;margin-right: $small-padding;
+    }
+  }
 }

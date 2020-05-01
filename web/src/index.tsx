@@ -4,6 +4,8 @@ import Button from "./components/button/button";
 import Icon from "./components/icon/icon";
 import React from "react";
 
+
+
 ReactDOM.render(
     <div style={{"margin": "1em"}}>
         <ul>
@@ -18,6 +20,9 @@ ReactDOM.render(
             </li>
             <li style={{"margin": "1em"}}>
                 <Button text={"下载"}/>
+            </li>
+            <li style={{"margin": "1em"}}>
+                <Button text={"下载"} icon={'left'} leftIcon={true}/>
             </li>
         </ul>
     </div>,
