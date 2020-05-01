@@ -23,6 +23,7 @@
             "dom",
             "es6"
         ],
+        "moduleResolution": "node",  //tslib的bug解决！
         "rootDir": ".",
         "rootDirs": [
             "include"

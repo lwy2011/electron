@@ -9,7 +9,7 @@
 }
 .yr-icon{
    width:1em;height:1em;
-   &[loading]{
+   &.loading{
       animation: loading 1s infinite linear ;
    }
    &[disabled]{

@@ -12,11 +12,12 @@ interface iconProps extends React.SVGAttributes<SVGElement> {
 const Icon: React.FunctionComponent<iconProps> = (
     {
         name,
-        className,
+        className,loading,
         ...other
     }) => {
     return (
-        <svg className={classes(className, "yr-icon")} {...other} >
+        <svg className={classes(className, "yr-icon",loading ? 'loading':'')}
+             {...other} >
             <use xlinkHref={`#i-${name}`}/>
         </svg>
     );

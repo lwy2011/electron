@@ -15,7 +15,13 @@
     background: darken($border-color, 10%);
   }
   &:hover{
-    border-color: $blue;opacity: .6;
+    color: $blue;opacity: .6;
+    .yr-icon{
+      fill: $blue;
+    }
+  }
+  span + svg{
+    margin-left: $small-padding;
   }
 
 }
