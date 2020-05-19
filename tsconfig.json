@@ -23,7 +23,7 @@
             "dom",
             "es6"
         ],
-        "moduleResolution": "node",  //tslib的bug解决！
+        "moduleResolution": "node",  //tslib的bug解决！https://github.com/ezolenko/rollup-plugin-typescript2/issues/12
         "rootDir": ".",
         "rootDirs": [
             "include"
